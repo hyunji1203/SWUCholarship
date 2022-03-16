@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/school_in"
+        android:enabled="true"
+        android:fontFamily="@font/wemakeprice_bold"
+        android:icon="@drawable/hamburger_menu"
+        android:iconTint="@color/white"
+        android:title="교내 장학금" />
+    <item
+        android:id="@+id/school_out"
+        android:enabled="true"
+        android:fontFamily="@font/wemakeprice_bold"
+        android:icon="@drawable/hamburger_menu"
+        android:iconTint="@color/white"
+        android:title="교외 장학금" />
+
+    <item
+        android:id="@+id/nation"
+        android:enabled="true"
+        android:fontFamily="@font/wemakeprice_bold"
+        android:icon="@drawable/hamburger_menu"
+        android:iconTint="@color/white"
+        android:title="국가 장학금"/>
+
+</menu>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.main">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Main">
+        <activity android:name=".hash_three"></activity>
+        <activity android:name=".loginActivity" />
+        <activity android:name=".MajorActivity" />
+        <activity android:name=".gradeActivity" />
+        <activity android:name=".MoneyActivity" />
+        <activity
+            android:name=".forthCoachActivity"
+            android:exported="true" />
+        <activity
+            android:name=".thirdCoachActivity"
+            android:exported="true" />
+        <activity
+            android:name=".secondCoachActivity"
+            android:exported="true" />
+        <activity
+            android:name=".firstCoachActivity"
+            android:exported="true" />
+        <activity
+            android:name=".hash6"
+            android:exported="true" />
+        <activity
+            android:name=".hash5"
+            android:exported="true" />
+        <activity
+            android:name=".hash4"
+            android:exported="true" />
+        <activity
+            android:name=".hash3"
+            android:exported="true" />
+        <activity
+            android:name=".hash2"
+            android:exported="true" />
+        <activity
+            android:name=".hash1"
+            android:exported="true" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".onboard">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mothjangcategory.nation"
+            android:exported="true" />
+        <activity
+            android:name=".mothjangcategory.school_out"
+            android:exported="true" />
+        <activity
+            android:name=".mothjangcategory.school_in"
+            android:exported="true" />
+        <activity
+            android:name=".alarm_help"
+            android:exported="true" />
+        <activity
+            android:name=".star_help"
+            android:exported="true" />
+        <activity
+            android:name=".star1"
+            android:exported="true" />
+        <activity android:name=".testExplain" />
+        <activity android:name=".monthjang" />
+        <activity android:name=".alarm" />
+        <activity android:name=".todo.MainActivity" />
+        <activity android:name=".search.searchMainActivity" />
+        <activity android:name=".search.Search" />
+        <activity android:name=".MainActivity_home">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

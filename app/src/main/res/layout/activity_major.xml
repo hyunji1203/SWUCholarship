@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MajorActivity"
+    android:background="@color/point">
+
+    <TextView
+        android:id="@+id/mjTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="회원가입"
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        android:textStyle="normal"
+        android:fontFamily="@font/lhb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="65dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/mjText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="학과선택"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="normal"
+        android:fontFamily="@font/lhb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mjTitle"
+        android:layout_marginTop="30dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/essential1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="*필수선택"
+        android:fontFamily="@font/lhb"
+        android:textColor="@color/main_icon_select"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/mjText"
+        app:layout_constraintHorizontal_bias="0.371"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toTopOf="@id/mjTitle"
+        android:layout_marginTop="88dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/majorBefore"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="80dp"
+        android:backgroundTint="@color/colorWhite"
+        android:fontFamily="@font/lhb"
+        android:text="이전"
+        android:textColor="@color/point"
+        android:textSize="25dp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/majorNext"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="80dp"
+        android:backgroundTint="@color/purple_700"
+        android:fontFamily="@font/lhb"
+        android:text="다음"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ScrollView
+        android:layout_width="350dp"
+        android:layout_height="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/majorNext"
+        android:layout_marginTop="160dp"
+        tools:ignore="MissingConstraints">
+
+        <RadioGroup
+            android:id="@+id/rg1"
+            android:layout_width="350dp"
+            android:layout_height="400dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="200dp">
+
+            <RadioButton
+                android:id="@+id/rb1"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:text="인문대학"
+                android:textAlignment="center"
+                android:fontFamily="@font/lhb"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="normal" />
+
+            <RadioButton
+                android:id="@+id/rb2"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:text="사회과학대학(스포츠운동학과 제외)"
+                android:textAlignment="center"
+                android:fontFamily="@font/lhb"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="normal"/>
+
+
+            <RadioButton
+                android:id="@+id/rb3"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:text="경영학과"
+                android:textAlignment="center"
+                android:fontFamily="@font/lhb"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="normal"/>
+
+            <RadioButton
+                android:id="@+id/rb4"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:text="자율전공학부(인문사회계열)"
+                android:textAlignment="center"
+                android:fontFamily="@font/lhb"
+                android:textColor="@color/white"
+                android:textStyle="normal"
+                android:textSize="18dp" />
+
+            <RadioButton
+                android:id="@+id/rb5"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:text="스포츠운동과학과"
+                android:textAlignment="center"
+                android:textSize="18dp"
+                android:fontFamily="@font/lhb"
+                android:textColor="@color/white"
+                android:textStyle="normal"/>
+
+            <RadioButton
+                android:id="@+id/rb6"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:text="자연과학대학"
+                android:textAlignment="center"
+                android:textSize="18dp"
+                android:fontFamily="@font/lhb"
+                android:textColor="@color/white"
+                android:textStyle="normal"/>
+
+            <RadioButton
+                android:id="@+id/rb7"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:text="미래산업융합대학\n(경영학과, 산업디자인과 제외)"
+                android:textAlignment="center"
+                android:textSize="18dp"
+                android:fontFamily="@font/lhb"
+                android:textColor="@color/white"
+                android:textStyle="normal"/>
+
+            <RadioButton
+                android:id="@+id/rb8"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:text="자율전공학부(자연계열)"
+                android:textAlignment="center"
+                android:textSize="18dp"
+                android:fontFamily="@font/lhb"
+                android:textColor="@color/white"
+                android:textStyle="normal"/>
+
+            <RadioButton
+                android:id="@+id/rb9"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:text="아트앤디자인스쿨"
+                android:textAlignment="center"
+                android:textSize="18dp"
+                android:fontFamily="@font/lhb"
+                android:textColor="@color/white"
+                android:textStyle="normal"/>
+
+            <RadioButton
+                android:id="@+id/rb10"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:text="산업디자인과"
+                android:textAlignment="center"
+                android:textSize="18dp"
+                android:fontFamily="@font/lhb"
+                android:textColor="@color/white"
+                android:textStyle="normal"
+                tools:ignore="DuplicateIds" />
+        </RadioGroup>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

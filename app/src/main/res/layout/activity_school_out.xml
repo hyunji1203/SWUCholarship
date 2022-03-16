@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mothjangcategory.school_out">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@color/point"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageButton
+                android:id="@+id/homeBtn5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="3dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/point"
+                app:srcCompat="@drawable/ic_home_bottombar" />
+
+            <ImageButton
+                android:id="@+id/infoBtn5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="3dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/point"
+                app:srcCompat="@drawable/ic_info_bottombar" />
+
+            <ImageButton
+                android:id="@+id/ringBtn5"
+                android:layout_width="61dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="3dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/point"
+                app:srcCompat="@drawable/ic_ring_bottombar" />
+
+            <ImageButton
+                android:id="@+id/myBtn5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="3dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/point"
+                app:srcCompat="@drawable/ic_my_bottombar" />
+
+            <ImageButton
+                android:id="@+id/starBtn5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="3dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/point"
+                app:srcCompat="@drawable/ic_star_bottombar" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/main_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/point"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/toolbar_logo"
+                android:layout_width="25dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="3dp"
+                android:minHeight="?attr/actionBarSize"
+                android:src="@drawable/logo_w" />
+
+            <TextView
+                android:id="@+id/toolbar_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/lhb"
+                android:text="SwuCholarShip"
+                android:textColor="#fff"
+                android:textSize="20dp"
+                android:textStyle="normal" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <!--드로어 여는 버튼-->
+        <ImageButton
+            android:id="@+id/btnOpen"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="7.5dp"
+            android:layout_marginStart="3dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_hambuger"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvs_profile"
+            android:layout_width="374dp"
+            android:layout_height="465dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+
+            android:layout_marginBottom="76dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/monthjang_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="80dp"
+            android:fontFamily="@font/lhb"
+            android:text="교외 장학금"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/category_back2"
+            android:layout_width="40dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="72dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_left_24" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--자식 레이아웃_Navigation Drawer-->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#FFF"
+        app:headerLayout="@layout/main_drawer_header"
+        app:itemIconTint="@color/point"
+        app:itemTextColor="@color/point">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/menu01"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="205dp"
+                android:layout_marginLeft="30dp"
+                android:backgroundTint="@color/point"
+                android:text="공지사항"
+                android:textSize="17dp"
+                android:gravity="left|center_vertical"
+                android:textColor="@color/white"
+                android:fontFamily="@font/lhb"
+                android:drawableLeft="@drawable/ic_hambuger_menu"/>
+
+            <Button
+                android:id="@+id/menu02"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:backgroundTint="@color/point"
+                android:layout_marginLeft="30dp"
+                android:text="장학금 상담문의"
+                android:textSize="17dp"
+                android:gravity="left|center_vertical"
+                android:textColor="@color/white"
+                android:fontFamily="@font/lhb"
+                android:drawableLeft="@drawable/ic_hambuger_menu"/>
+
+            <Button
+                android:id="@+id/menu03"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:backgroundTint="@color/point"
+                android:layout_marginLeft="30dp"
+                android:text="사용설명서"
+                android:textSize="17dp"
+                android:gravity="left|center_vertical"
+                android:textColor="@color/white"
+                android:fontFamily="@font/lhb"
+                android:drawableLeft="@drawable/ic_hambuger_menu"/>
+
+            <Button
+                android:id="@+id/menu04"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:backgroundTint="@color/point"
+                android:layout_marginLeft="30dp"
+                android:text="로그아웃"
+                android:textSize="17dp"
+                android:gravity="left|center_vertical"
+                android:textColor="@color/white"
+                android:fontFamily="@font/lhb"
+                android:drawableLeft="@drawable/ic_hambuger_menu"/>
+        </LinearLayout>
+    </com.google.android.material.navigation.NavigationView>
+</androidx.drawerlayout.widget.DrawerLayout>
