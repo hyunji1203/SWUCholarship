@@ -46,87 +46,61 @@
         app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:ignore="MissingConstraints" />
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="120dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="35dp"
-        android:src="@drawable/search_title"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499"
-        tools:ignore="MissingConstraints" />
+    <!-- 검색 히스토리 뷰 -->
 
-    <ImageButton
-        android:id="@+id/s_hash6"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
+    <LinearLayout
+        android:id="@+id/linear_search_history_view"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="40dp"
-        android:src="@drawable/search_student"
+        android:layout_marginBottom="5dp"
+        android:background="#fff"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.574"
-        tools:ignore="MissingConstraints" />
-
-    <ImageButton
-        android:id="@+id/s_hash1"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:src="@drawable/search_3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.574" />
+        app:layout_constraintTop_toBottomOf="@+id/searchWord">
 
-    <ImageButton
-        android:id="@+id/s_hash2"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:src="@drawable/search_duplicable"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/s_hash3"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.574"
-        tools:ignore="MissingConstraints" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/point"
+            android:paddingHorizontal="10dp">
 
-    <ImageButton
-        android:id="@+id/s_hash3"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="42dp"
-        android:src="@drawable/search_money"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.655"
-        tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/search_history_mode_switch_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="최근 검색어"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/s_hash5"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="14dp"
-        android:src="@drawable/search_local"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/s_hash3"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.655"
-        tools:ignore="MissingConstraints" />
+            <Button
+                android:id="@+id/clear_search_history_buttton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:drawableEnd="@drawable/ic_baseline_delete_outline_24"
+                android:text="전체삭제"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
 
-    <ImageButton
-        android:id="@+id/s_hash4"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="40dp"
-        android:src="@drawable/search_other"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.655"
-        tools:ignore="MissingConstraints" />
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/search_history_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

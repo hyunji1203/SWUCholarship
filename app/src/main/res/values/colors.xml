@@ -18,4 +18,8 @@
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorBlue">#2196F3</color>
 
+
+    <color name="colorLightGray">#BABABA</color>
+    <color name="colorGray">#7B7B7B</color>
+
 </resources>

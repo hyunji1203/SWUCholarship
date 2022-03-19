@@ -1,26 +1,36 @@
 package com.example.main.search
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
+import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CompoundButton
 import android.widget.TextView
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.main.DBManager
-import com.example.main.Exam
-import com.example.main.R
-import com.example.main.testExplain
+import com.example.main.*
+import com.google.firebase.database.ktx.database
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.fragment_first.*
 import kotlinx.android.synthetic.main.item.*
 import kotlinx.android.synthetic.main.secondsearch.searchBtn2
 import kotlinx.android.synthetic.main.secondsearch.searchWord2
 import kotlinx.android.synthetic.main.item.view.*
 import kotlinx.android.synthetic.main.secondsearch.*
+import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+import java.util.*
+import kotlin.collections.ArrayList
 
 class Search : AppCompatActivity() {
 
@@ -45,7 +55,6 @@ class Search : AppCompatActivity() {
         // 검색 옵션에 따라 검색
         searchBtn2.setOnClickListener {
             (recyclerview.adapter as RecyclerViewAdapter).search(searchWord2.text.toString(), searchOption)
-
         }
 
         // 뒤로가기 버튼을 누르면 메인검색창으로 넘어감
@@ -113,6 +122,8 @@ class Search : AppCompatActivity() {
                 // ArrayList 비워줌
                 suburbs_list.clear()
 
+                writeData(searchWord2)
+
                 for (snapshot in querySnapshot!!.documents) {
                     if (snapshot.getString(option)!!.contains(searchWord2)) {
                         var item = snapshot.toObject(scholarship::class.java)
@@ -122,5 +133,30 @@ class Search : AppCompatActivity() {
                 notifyDataSetChanged()
             }
         }
+    }
+
+
+    fun writeData(name: String) {
+
+        val range = (1..100)
+
+        var a = range.random().toString()
+
+        val database = Firebase.database
+        val myRef = database.getReference("searchhistory").child(a)
+
+        val Data = Data(name, Date().toString(),0)
+
+        myRef.setValue(Data)
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    fun Date.toSimpleString() : String {
+
+        val current = LocalDateTime.now()
+        val formatter = DateTimeFormatter.ISO_DATE
+        val formatted = current.format(formatter)
+
+        return formatted
     }
 }

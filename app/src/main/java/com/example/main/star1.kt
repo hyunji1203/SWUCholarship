@@ -60,6 +60,7 @@ class star1 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_star1)
+
         setSupportActionBar(findViewById<Toolbar>(R.id.main_toolbar))
         supportActionBar?.setDisplayShowTitleEnabled(false) // 툴바에 타이틀 안보이게
 
